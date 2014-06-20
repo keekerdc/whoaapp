@@ -1,0 +1,59 @@
+$black: rgb(40,40,40);
+$slate: rgb(90,90,90);
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+
+  color: darken(white, 20%);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1;
+
+  background: $slate;
+  margin: 0;
+  padding: 20px;
+
+}
+
+.prewhoa, .whoa, .permawhoa {
+  text-align: center;
+}
+
+.prewhoa {
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+.whoa {
+  color: white;
+  display: block;
+  width: 100%;
+  background: rgb(200,0,0);
+  padding: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 64px;
+  text-align: center;
+  margin-top: 20px;
+  box-shadow: 10px 10px 1px 0 rgba(0,0,0,0.4);
+  border-radius: 10px;
+  border: 5px solid rgba(0,0,0, 0.5);
+
+  transition: background 0.2s ease;
+
+  &:hover{
+    background: rgb(220,0,0);
+  }
+
+  &:active {
+    background: rgb(255,30,30);
+  }
+}
+
+.permawhoa {
+  margin-top: 20px;
+}
