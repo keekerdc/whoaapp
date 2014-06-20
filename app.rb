@@ -35,7 +35,7 @@ class Whoa < Sinatra::Base
       pulled: "niggas getting pulled on my block like",
       home: "coming home within a half an hour like",
       fronting: "fronting like they had the manpower like",
-      porsche: "come through in the Porsche slow like whoa",
+      porsche: "come through in the Porsche slow like",
       nitro: "my niggas, like dough, light 'dro, nitro, might flow, nice clothes like",
       cocaine: "ease pain with cocaine like",
       docstrange: "now I'm Doc Strange in the Range like",
