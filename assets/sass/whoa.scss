@@ -40,7 +40,7 @@ body {
   text-align: center;
   margin-top: 20px;
   box-shadow: 10px 10px 1px 0 rgba(0,0,0,0.4);
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   border: 5px solid rgba(0,0,0, 0.5);
 
   transition: background 0.2s ease;
@@ -50,6 +50,34 @@ body {
   }
 
   &:active {
+    background: rgb(255,30,30);
+  }
+}
+
+#playwhoa {
+  display: block;
+  margin: 0;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  background: rgb(200,0,0);
+  color: white;
+  border: 5px solid rgba(0,0,0, 0.5);
+  border-top: 0;
+  box-shadow: 10px 10px 1px 0 rgba(0,0,0,0.4);
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  &:hover{
+    background: rgb(220,0,0);
+  }
+
+  &:active {
+    background: rgb(255,30,30);
+  }
+  &:focus {
+    outline: none;
     background: rgb(255,30,30);
   }
 }

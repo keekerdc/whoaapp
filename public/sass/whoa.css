@@ -30,12 +30,35 @@ body {
   text-align: center;
   margin-top: 20px;
   box-shadow: 10px 10px 1px 0 rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   border: 5px solid rgba(0, 0, 0, 0.5);
   transition: background 0.2s ease; }
   .whoa:hover {
     background: #dc0000; }
   .whoa:active {
+    background: #ff1e1e; }
+
+#playwhoa {
+  display: block;
+  margin: 0;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  background: #c80000;
+  color: white;
+  border: 5px solid rgba(0, 0, 0, 0.5);
+  border-top: 0;
+  box-shadow: 10px 10px 1px 0 rgba(0, 0, 0, 0.4);
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer; }
+  #playwhoa:hover {
+    background: #dc0000; }
+  #playwhoa:active {
+    background: #ff1e1e; }
+  #playwhoa:focus {
+    outline: none;
     background: #ff1e1e; }
 
 .permawhoa {

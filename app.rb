@@ -8,7 +8,11 @@ class Whoa < Sinatra::Base
 
   get '/:key/?' do
     if flow_whoa params[:key]
-      erb :whoa, locals: { whoa: flow_whoa(params[:key]), key: params[:key] }
+      erb :whoa, locals: {
+        whoa: flow_whoa(params[:key]),
+        key: params[:key],
+        start: whoa_times(params[:key]).first,
+        stop: whoa_times(params[:key]).last  }
     else
       redirect to '/'
     end
@@ -16,7 +20,11 @@ class Whoa < Sinatra::Base
 
   get '/' do
     key = any_whoa
-    erb :whoa, locals: { whoa: flow_whoa(key), key: key }
+    erb :whoa, locals: {
+      whoa: flow_whoa(key),
+      key: key,
+      start: whoa_times(key).first,
+      stop: whoa_times(key).last  }
   end
 
   def whoa
@@ -30,7 +38,7 @@ class Whoa < Sinatra::Base
       shitsshining: "shoulda seen them shits shining on her wrist,",
       money: "now money ain't a problem, see my dough is like",
       bankroll: "fulled out my bankroll on y'all niggas like",
-      floss: "floss the blue shrimp from two-tenth like",
+      shrimp: "floss the blue shrimp from two-tenth like",
       brakes: "had to hit the brakes on y'all niggas like",
       pulled: "niggas getting pulled on my block like",
       home: "coming home within a half an hour like",
@@ -89,6 +97,78 @@ class Whoa < Sinatra::Base
       onthemic: "that nigga Black Rob on the mic is",
       wholeflow: "my whole fucking flow on the mic is"
     }
+  end
+
+  def whoa_times( key )
+    {
+      shit: [4.7,9.8],
+      anythingill: [10.4,12.4],
+      big6: [13.1,16.2],
+      uptown: [21,24.4],
+      inthehead: [24.4,27.4],
+      diamonds: [27,29.7],
+      shitsshining: [30.6, 33.2],
+      money: [32.2, 34.6],
+      bankroll: [35.2, 38],
+      shrimp: [38,40.6],
+      brakes: [44.6, 47.2],
+      pulled: [47.2, 49.8],
+      home: [49.6, 52],
+      fronting: [51.8, 54.4],
+      porsche: [59.8, 62.4],
+      nitro: [62.4, 68.2],
+      cocaine: [68, 70.4],
+      docstrange: [70, 72.6],
+      hundredmph: [73.4, 76],
+      brain: [76.2, 79],
+      finger: [78.8, 81.6],
+      floss: [81.4,84],
+      benzcoupe: [84.5,87.3],
+      cheeselines: [87,89.6],
+      grenade: [90,92.8],
+      love: [93.2,96],
+      putmethrough: [95.5, 98.6],
+      toetotoe: [97.4,100.4],
+      bagit: [178.0,180.0],
+      stripit: [180.4, 183.0],
+      equipit: [183.3, 186.0],
+      spitting: [186.4,189.2],
+      shorts: [188.6, 190.6],
+      crunk: [191.6, 194.2],
+      flowproperly: [194.6, 197.2],
+      nostopping: [197.2,200],
+      popping: [200,203],
+      hearmyname: [203,205.8],
+      concrete: [205.8,208.4],
+      fill: [208.8, 211],
+      yourman: [211.2, 212.6],
+      judge: [212.6,214],
+      cos: [214,215.4],
+      pos: [215.4, 217],
+      gijoe: [217,222.2],
+      va: [233.8, 236.2],
+      atl: [236.2, 239],
+      chitown: [238.6, 241.4],
+      la: [242, 244.4],
+      dc: [244.4, 247.2],
+      prdr: [247.2, 250.2],
+      detroit: [250.2, 253],
+      nola: [253, 255.6],
+      bostonjersey: [255.8, 258.4],
+      floridaphilly: [258.6, 261.2],
+      tampatexascleveland: [261.4, 264.2],
+      memphislilrock: nil,
+      panama: nil,
+      newyork: nil,
+      badboy: nil,
+      alumni: nil,
+      ncsc: nil,
+      buckwild: nil,
+      story: nil,
+      eighthstreet: nil,
+      onthemic: nil,
+      wholeflow: nil
+    }[key.to_sym] or [0, 0]
   end
 
   def flow_whoa( key )
